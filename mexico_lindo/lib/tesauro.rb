@@ -20,8 +20,11 @@ class Tesauro
   end
 
   def get_nombre_app
-	@nombre_app
+	  @nombre_app
   end
-	
+
+	def get_palabra_oculta(pregunta)
+    return "\*" * @tesauro[pregunta].length 
+  end
 end
 

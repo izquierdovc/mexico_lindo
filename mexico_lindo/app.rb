@@ -5,6 +5,7 @@ get '/' do
   @tesauro = Tesauro.new
   @@pregunta = @tesauro.get_nueva_pregunta
   @@palabra = @tesauro.get_respuesta(@@pregunta).downcase
+  @@palabra_secreta = @tesauro.get_palabra_oculta(@@pregunta)
   @@errores = 0
   @@titulo_app = @tesauro.get_nombre_app
   erb :inicio
@@ -14,6 +15,7 @@ end
 get '/jugar' do
   @@mensaje = ""
   @@nombre_jugador = params["jugador"]
+
   erb :jugar
 end
 

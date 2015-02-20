@@ -16,4 +16,6 @@ Scenario: ver pregunta
 Given inicie juego
 Then debe aparecer "Ingrese su letra"
 
-
+Scenario: ver palabra oculta
+Given inicie juego
+Then debe aparecer "\*"

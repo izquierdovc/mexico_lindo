@@ -20,6 +20,15 @@ describe Tesauro do
 		@nombre_app = @tesauro.get_nombre_app
 		@nombre_app.should == "Mexico Lindo y Querido"
 	end
+  
+  it "retornar palabra secreta oculta" do
+    @palabra_oculta = @tesauro.get_palabra_oculta('Capital del estado de Nayarit')
+    @existe = 0
+    if @palabra_oculta.include? "*"
+      @existe = 1
+    end
+    @existe.should == 1
+  end
 
 end
 
