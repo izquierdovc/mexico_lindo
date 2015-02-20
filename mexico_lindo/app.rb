@@ -6,7 +6,9 @@ get '/' do
   @@pregunta = @tesauro.get_nueva_pregunta
   @@palabra = @tesauro.get_respuesta(@@pregunta).downcase
   @@errores = 0
+  @@titulo_app = @tesauro.get_nombre_app
   erb :inicio
+
 end
 
 get '/jugar' do

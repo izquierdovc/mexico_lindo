@@ -16,5 +16,10 @@ describe Tesauro do
 	  respuesta.should == 'Tepic'
 	end
 
+	it "retornar nombre de la App" do
+		@nombre_app = @tesauro.get_nombre_app
+		@nombre_app.should == "Mexico Lindo y Querido"
+	end
+
 end
 
