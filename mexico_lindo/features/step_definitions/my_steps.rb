@@ -93,3 +93,9 @@ When(/^escribo letra "(.*?)"$/) do |arg1|
 end
 
 
+When(/^escribo nombre "(.*?)"$/) do |arg1|
+  fill_in("jugador", :with => arg1)
+  click_button("iniciar")
+end
+
+

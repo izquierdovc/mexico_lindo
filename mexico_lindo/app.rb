@@ -13,6 +13,7 @@ end
 
 get '/jugar' do
   @@mensaje = ""
+  @@nombre_jugador = params["jugador"]
   erb :jugar
 end
 
