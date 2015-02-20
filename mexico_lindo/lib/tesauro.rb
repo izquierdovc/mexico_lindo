@@ -11,7 +11,7 @@ class Tesauro
   def get_nueva_pregunta
     items = @tesauro.keys
     item = items[rand(items.length)]
-    @tesauro[item]
+    item
   end
 
   def get_respuesta(pregunta)

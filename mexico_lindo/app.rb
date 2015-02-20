@@ -2,10 +2,14 @@ require 'sinatra'
 require './lib/tesauro'
 
 get '/' do
-	erb :home
+  @tesauro = Tesauro.new
+  @@pregunta = @tesauro.get_nueva_pregunta
+	erb :inicio
 end
 
-
+get '/jugar' do
+  erb :jugar
+end
 
 get '/adivinanza' do
 	@@letra = params['letra']
@@ -22,7 +26,7 @@ get '/adivinanza' do
 					@@mensaje = 'Debes ingresar solo una letra'
 			elsif @@palabra_secreta.include?(@@letra)
 					@@mensaje = 'Has adivinado una letra'
-								
+							
 			end
 	end 
 
