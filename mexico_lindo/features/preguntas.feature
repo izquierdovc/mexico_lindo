@@ -19,3 +19,9 @@ Scenario:
 #Given 
 #When 
 #Then 
+
+Scenario: ver respuesta de letra
+Given inicie juego
+When escribo letra "a"
+Then debe aparecer "Resultado"
+

@@ -87,6 +87,9 @@ When(/^debe ver la leyenda "(.*?)"$/) do |arg1|
 end
 
 
-
+When(/^escribo letra "(.*?)"$/) do |arg1|
+  fill_in("letra", :with => arg1)
+  click_button("enviar")
+end
 
 

@@ -16,6 +16,21 @@
 		<tr>
 			<td><p><%= @@pregunta %></p></td>
 		</tr>
+    <tr>
+			<td><p>Ingrese su letra</p></td>
+		</tr>
+    <tr>
+			<td><p>
+        <form action="/enviar_letra">
+          <input type="text" name="letra"/>
+          <input type="submit" id="enviar"/>
+        </form>
+      </p></td>
+		</tr>
+    <tr>
+			<td><p><%=@@mensaje%></p></td>
+		</tr>
+
 	</table>
  </body>
 </html>
