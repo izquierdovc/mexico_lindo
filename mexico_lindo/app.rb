@@ -1,8 +1,11 @@
 require 'sinatra'
+require './lib/tesauro'
 
 get '/' do
 	erb :home
 end
+
+
 
 get '/adivinanza' do
 	@@letra = params['letra']
@@ -23,6 +26,15 @@ get '/adivinanza' do
 			end
 	end 
 
+#if @@letra == ""
+#     @@mensaje = "Debes ingresar una letra"
+#  elsif @@letra.to_s.length > 1
+#    @@mensaje = "Debes ingresar solo una letra"
+#  elsif ["0","1","2","3","4","5","6","7","8","9"].include? @@letra.to_s
+#    @@mensaje = "Solo Letras"
+#  elsif @@palabra.include? @@letra.to_s
+#    @@mensaje = "acertaste"
+#  end
 	erb :adivinanza
 end
 
