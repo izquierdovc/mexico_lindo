@@ -6,6 +6,7 @@ class Tesauro
                   'Capital del estado de Nayarit' => 'Tepic',
                   'El barro negro es una artesania tipica de este estado' => 'Oaxaca'
                  ]
+	  @nombre_app = "Mexico Lindo y Querido";
   end
 
   def get_nueva_pregunta
@@ -17,5 +18,10 @@ class Tesauro
   def get_respuesta(pregunta)
     return @tesauro[pregunta]
   end
+
+  def get_nombre_app
+	@nombre_app
+  end
+	
 end
 

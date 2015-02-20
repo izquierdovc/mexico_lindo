@@ -4,6 +4,7 @@ require './lib/tesauro'
 get '/' do
   @tesauro = Tesauro.new
   @@pregunta = @tesauro.get_nueva_pregunta
+  @@titulo_app = @tesauro.get_nombre_app
 	erb :inicio
 end
 
