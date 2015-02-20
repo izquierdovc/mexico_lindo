@@ -1,7 +1,7 @@
 {
   "Cucumber Features": {
     "coverage": {
-      "/home/kleer/workspace/mexico_lindo/template/app.rb": [
+      "/home/kleer/workspace/proyecto/mexico_lindo/mexico_lindo/app.rb": [
         1,
         null,
         1,
@@ -32,7 +32,7 @@
         null,
         null
       ],
-      "/home/kleer/workspace/mexico_lindo/template/features/step_definitions/my_steps.rb": [
+      "/home/kleer/workspace/proyecto/mexico_lindo/mexico_lindo/features/step_definitions/my_steps.rb": [
         1,
         1,
         null,
@@ -82,7 +82,7 @@
         null,
         null
       ],
-      "/home/kleer/workspace/mexico_lindo/template/features/step_definitions/template_steps.rb": [
+      "/home/kleer/workspace/proyecto/mexico_lindo/mexico_lindo/features/step_definitions/template_steps.rb": [
         1,
         0,
         null,
@@ -112,6 +112,6 @@
         null
       ]
     },
-    "timestamp": 1424386026
+    "timestamp": 1424450906
   }
 }
