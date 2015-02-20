@@ -11,3 +11,9 @@ When debe aparecer el boton "Iniciar juego"
 Scenario: ver pregunta
 Given inicie juego
 Then debe aparecer "Pregunta"
+
+Scenario: ver pregunta
+Given inicie juego
+Then debe aparecer "Ingrese su letra"
+
+
