@@ -4,12 +4,13 @@ require './lib/tesauro'
 get '/' do
   @tesauro = Tesauro.new
   @@pregunta = @tesauro.get_nueva_pregunta
-  @@palabra = @tesauro.get_respuesta(@@pregunta)
+  @@palabra = @tesauro.get_respuesta(@@pregunta).downcase
+  @@errores = 0
   erb :inicio
 end
 
 get '/jugar' do
- @@mensaje = ""
+  @@mensaje = ""
   erb :jugar
 end
 
@@ -19,7 +20,7 @@ get '/adivinanza' do
 end
 
   get '/enviar_letra' do
-    @@letra = params["letra"]
+    @@letra = params["letra"].downcase
 	  @@mensaje = "Resultado "
 
     if @@letra == ""
@@ -32,6 +33,7 @@ end
       @@mensaje += "acertaste"
     else
       @@mensaje += "fallaste"
+      @@errores = @@errores + 1
     end
 
     erb :jugar
